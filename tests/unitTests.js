@@ -3,6 +3,7 @@ var wfsApp = require("../WfsApp.js");
 function unitTests() {}; 
 unitTests.LoadConfig = function(test) 
 {
+	test.ok(true==false, true, "Test failing"); 
 	var appLayer = new wfsApp(); 
 	test.ok(appLayer, {}, "Instance has params"); 
 	appLayer.LoadConfig(); 
