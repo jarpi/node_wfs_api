@@ -1,4 +1,5 @@
-var WFSMethod = require('./WFSMethod.js'); 
+var appPath = __dirname; 
+var WFSMethod = require(appPath + '/WFSMethod.js'); 
 
 function WFSMethodGetFeature(queryParams, params) 
 { 
