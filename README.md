@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/jarpi/node_wfs_api.svg?branch=master)](https://travis-ci.org/jarpi/node_wfs_api)
