@@ -15,8 +15,6 @@
   "dependencies": {
     "express":">=4.13.x", 
     "nodemon":">=1.3.x", 
-    "nodeunit":">=0.9.1", 
-    "jslint":">=0.9.x", 
-    "fixmyjs":">=1.0.x" 
+    "nodeunit":">=0.9.1" 
   }
 }
