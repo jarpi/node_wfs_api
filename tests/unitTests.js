@@ -1,5 +1,5 @@
 var appPath = __dirname; 
-var wfsApp = require("../wfs-app.js"); 
+var wfsApp = require(appPath + '/../wfs-app.js'); 
 function unitTests() {}; 
 unitTests.LoadConfig = function(test) 
 {
