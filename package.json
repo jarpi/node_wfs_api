@@ -4,7 +4,7 @@
   "description": "Minimum WFS API parser for node",
   "main": "app.js",
   "scripts": {
-    "test": "nodeunit ./tests/unitTests.js ./tests/unitTests2.js"
+    "test": "nodeunit ./tests/unitTests.js" 
   },
   "repository": {
     "type": "git",

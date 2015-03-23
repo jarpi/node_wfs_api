@@ -28,4 +28,6 @@ WFSMethod.prototype.fillMandatoryParams = function() {
 	return (iOkParamsCount == Object.keys(this.mandatoryParams).length);  
 }; 
 
+WFSMethod.prototype.fillMandatoryParams = function() {}; 
+
 module.exports = WFSMethod; 

@@ -1,15 +1,18 @@
-// var nodeunit = require("../node_modules/nodeunit"); 
+var appPath = __dirname; 
+var wfsApp = require("../WfsApp.js"); 
 function unitTests() {}; 
-unitTests.tryTest = function(test) 
+unitTests.LoadConfig = function(test) 
 {
-	test.ok(true===true, "This should pass"); 
-	test.ok(true===true, "Pass..."); 
-	test.done(); 
-}; 
-
-unitTests.tryTest2 = function(test) 
-{
-	test.notStrictEqual(false, true, "This should not pass"); 
+	var appLayer = new wfsApp(); 
+	test.ok(appLayer, {}, "Instance has params"); 
+	appLayer.LoadConfig(); 
+	// Check var instances are filled 
+	var methods = appLayer.GetMethods(); 
+	var methodsParams = appLayer.GetMethodsParams(); 
+	test.notEqual(methods, {}, "Have you filled app.conf.json? Check config file and try again"); 
+	test.notEqual(methodsParams, {}, "Have you filled app.conf.json? Check config file and try again"); 
+	test.ok(methods.hasOwnProperty('GetFeature'), true, 'Something gone wrong, \'GetFeature\' method not found in methods'); 
+	test.ok(methodsParams.hasOwnProperty('GetFeature'), true, 'Something gone wrong, \'GetFeature\' method not found in method params'); 
 	test.done(); 
 }; 
 

@@ -6,6 +6,8 @@ var wfsMainApp = require(appPath+'/WfsApp.js');
 var WFSMethod = require(appPath+'/models/WFSMethod.js');
 var wfsMain = new wfsMainApp(); 
 
+console.dir(wfsMain instanceof Function); 
+
 // Init server 
 wfsMain.LoadConfig(); 
 var server = app.listen(3000, function () {
