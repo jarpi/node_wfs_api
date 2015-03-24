@@ -4,17 +4,31 @@ var app = express();
 var appPath = __dirname; 
 var wfsMainApp = require(appPath+'/wfs-app.js'); 
 var wfsMain = new wfsMainApp(); 
+var server = undefined;  
 
-var server = app.listen(3000, function () {
-  var host = server.address().address
-  var port = server.address().port
-  console.log('WFS layer app listening at http://%s:%s', host, port); 
-}); 
+module.exports.stopServer = function(cb) 
+{
+	server.close(function(){
+		console.log("Closed out remaining connections.");
+		cb(); 
+	}); 
+} 
 
-// Get http request (view, router) 
-app.get('/wfs', function (req, res) 
-	{ 
-		wfsMain.RunQuery(req.query, res); 
-	}
-); 
+module.exports.startServer = function() 
+{
+	server = app.listen(3000, function () {
+		var host = server.address().address
+		var port = server.address().port
+		console.log('WFS layer app listening at http://%s:%s', host, port); 
+	}); 
+
+	// Get http request (view, router) 
+	app.get('/wfs', function (req, res) 
+		{ 
+			wfsMain.RunQuery(req.query, res); 
+		}
+	); 
+} 
+
+this.startServer(); 
 

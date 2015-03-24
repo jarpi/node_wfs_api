@@ -53,7 +53,6 @@ function DispatchRequest(url, responseStream) {
     });
     response.once('end', function () { 
     	responseStream.end();
-    	console.log(responseStream); 
     }); 
   }).once('error', function (error) {
     SendError(error.toString(), 404, responseStream);
