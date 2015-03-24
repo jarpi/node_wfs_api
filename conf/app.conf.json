@@ -1,14 +1,20 @@
 {"availableMethods":
-	[
-		{
-			"GetFeature": {
-				"ModelDefinition": "/models/WFSMethodGetFeature.js", 
-				"Params": 
-				{
-					"MandatoryParams": {"request":"","typename":"", "apikey":""},
-					"OptionalParams": {"aliases":"","srsName":"","projectionClause":"","filter":"","resourceid":"","bbox":"","sortby":"","storedquery_id":"","storedquery_parameter":""}  
-				} 
-			}
-		} 
-	]
+	{
+		"GetFeature": {
+			"ModelDefinition": "/models/WFSMethodGetFeature.js", 
+			"Params": 
+			{
+				"MandatoryParams": {"request":"","typename":"", "apikey":""},
+				"OptionalParams": {"aliases":"","srsName":"","projectionClause":"","filter":"","resourceid":"","bbox":"","sortby":"","storedquery_id":"","storedquery_parameter":""}  
+			} 
+		}, 
+		"AAA":{
+			"ModelDefinition": "/models/WFSMethodGetFeature.js", 
+			"Params": 
+			{
+				"MandatoryParams": {"request":"","typename":"", "apikey":""},
+				"OptionalParams": {"aliases":"","srsName":"","projectionClause":"","filter":"","resourceid":"","bbox":"","sortby":"","storedquery_id":"","storedquery_parameter":""}  
+			} 
+		}
+	} 
 } 

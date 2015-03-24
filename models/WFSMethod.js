@@ -1,6 +1,6 @@
-function WFSMethod(queryParams, params) {
-	this.mandatoryParams = params.MandatoryParams; 
-	this.optionalParams = params.OptionalParams; 
+function WFSMethod(queryParams, configParams) {
+	this.mandatoryParams = configParams.MandatoryParams; 
+	this.optionalParams = configParams.OptionalParams; 
 	this.queryParams = queryParams; 
 };  
 
@@ -28,6 +28,6 @@ WFSMethod.prototype.fillMandatoryParams = function() {
 	return (iOkParamsCount == Object.keys(this.mandatoryParams).length);  
 }; 
 
-WFSMethod.prototype.fillMandatoryParams = function() {}; 
+WFSMethod.prototype.createRequest = function() {}; 
 
 module.exports = WFSMethod; 
