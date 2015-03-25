@@ -45,7 +45,26 @@ There’s a main “class” that parses a config file (app.conf.json), those ob
 } 
 ``` 
 So WFS have 11 methods for now in 2.0 version, that's not so much, but i'm lazy so i've decided that the developer that is developing the final product must work. 
-```app.conf.js``` define an ```availableMethods``` object, which contains the methods which our layer will respond. Besides the method definition will be defined a ```params``` object who will contain mandatory params and optional params for the request. That's simple, right? 
+```app.conf.js``` define an ```availableMethods``` object, which contains the methods which our layer will answer. Besides the method definition will be defined a ```params``` object who will contain mandatory params and optional params for the request. That's simple, right? 
 
 ```In fact, we can use this library to hit any API, just adapt it at your will  ``` 
 
+To add a new method to hit our API, edit ```conf/app.conf.json```, add your method definition, and your mandatory params and optional params. 
+Create a new file inside models/*, with this structure: 
+```
+function WFSMethod[Feature_Name](queryParams, configParams) 
+{ 
+	WFSMethod.call(this, queryParams, configParams); 
+	
+}; 
+
+WFSMethodGetFeature.prototype = Object.create(WFSMethod.prototype); 
+WFSMethodGetFeature.prototype.constructor = WFSMethod[Feature_Name];  
+
+WFSMethodGetFeature.prototype.createRequest = function() {}; 
+``` 
+And start serving. 
+
+Enjoy! 
+
+Thanks h4ckademy! You rock guys! 
