@@ -19,11 +19,15 @@ WFSMethodGetFeature.prototype.createRequest = function() {
 	var tableName = mandatoryParamsArray.slice(1); 
 	var api_key = this.mandatoryParams.apikey; 
 	var sqlQuery = "SELECT+*+FROM+" + tableName; 
+	httpRequest += sqlQuery; 
 	if (this.optionalParams.resourceid !== undefined)
 	{
 		sqlQuery += "+WHERE+cartodb_id=" + this.optionalParams.resourceid; 
-	}
-	httpRequest += sqlQuery + "&api_key=" + api_key;  
+	} 
+	if (this.optionalParams.api_key !== undefined) 
+	{
+		httpRequest += "&api_key=" + api_key;  
+	} 
 	return httpRequest; 
 }; 
 

@@ -4,7 +4,7 @@
 			"ModelDefinition": "/models/WFSMethodGetFeature.js", 
 			"Params": 
 			{
-				"MandatoryParams": {"request":"","typename":"", "apikey":""},
+				"MandatoryParams": {"request":"","typename":""},
 				"OptionalParams": {"aliases":"","srsName":"","projectionClause":"","filter":"","resourceid":"","bbox":"","sortby":"","storedquery_id":"","storedquery_parameter":""}  
 			} 
 		}, 
@@ -12,7 +12,7 @@
 			"ModelDefinition": "/models/WFSMethodGetFeature.js", 
 			"Params": 
 			{
-				"MandatoryParams": {"request":"","typename":"", "apikey":""},
+				"MandatoryParams": {"request":"","typename":""},
 				"OptionalParams": {"aliases":"","srsName":"","projectionClause":"","filter":"","resourceid":"","bbox":"","sortby":"","storedquery_id":"","storedquery_parameter":""}  
 			} 
 		}

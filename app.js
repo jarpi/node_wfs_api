@@ -6,20 +6,13 @@ var wfsMainApp = require(appPath+'/wfs-app.js');
 var wfsMain = new wfsMainApp(); 
 var server = undefined;  
 
-module.exports.stopServer = function(cb) 
-{
-	server.close(function(){
-		console.log("Closed out remaining connections.");
-		cb(); 
-	}); 
-} 
-
-module.exports.startServer = function() 
+module.exports.startServer = function(cb) 
 {
 	server = app.listen(3000, function () {
 		var host = server.address().address
 		var port = server.address().port
-		console.log('WFS layer app listening at http://%s:%s', host, port); 
+		// console.log('WFS layer app listening at http://%s:%s', host, port); 
+		cb(); 
 	}); 
 
 	// Get http request (view, router) 
@@ -28,7 +21,17 @@ module.exports.startServer = function()
 			wfsMain.RunQuery(req.query, res); 
 		}
 	); 
+}
+
+module.exports.stopServer = function(cb) 
+{
+	server.close(function(){
+		// console.log("Closed out remaining connections.");
+		cb(); 
+	}); 
 } 
 
-this.startServer(); 
+this.startServer(function(){
+	// console.log('Server started succesfully'); 
+}); 
 
