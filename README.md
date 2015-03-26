@@ -1,9 +1,7 @@
 [![Build Status](https://travis-ci.org/jarpi/node_wfs_api.svg?branch=master)](https://travis-ci.org/jarpi/node_wfs_api) 
-
-# Web Feature Layer implementation in NodeJS 
-
 [![Join the chat at https://gitter.im/jarpi/node_wfs_api](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jarpi/node_wfs_api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+# Web Feature Layer implementation in NodeJS 
 
 ### What's this project about? 
 
