@@ -5,7 +5,7 @@
 
 ### What's this project about? 
 
-While i was at [h4ckademy](http://www.h4ckademy.com/) i was challanged to create a web feature layer 
+While i was at [h4ckademy](http://www.h4ckademy.com/) i was challenged to create a web feature layer 
 to hit an API. The project itself must be open source and also fill a need for a company, so that's the goal of it. There's only one method implemented, but it's enough to see how it works and how to extend it, in a near future i expect to implement more methods. 
 
 #### What's WFS? 
